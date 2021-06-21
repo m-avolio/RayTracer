@@ -3,6 +3,7 @@
         "__bit_reference": "cpp",
         "deque": "cpp",
         "iterator": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "*.tcc": "cpp"
     }
 }
