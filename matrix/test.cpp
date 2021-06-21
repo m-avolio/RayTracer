@@ -35,6 +35,10 @@ int main() {
     a = Tuple(1, -2, 3, -4);
     assert(equal(Tuple(-1, 2, -3, 4), -a));
 
+
+    assert(equal(Tuple(3.5, -7, 10.5, -14), a*3.5));
+    assert(equal(Tuple(0.5, -1, 1.5, -2), a*0.5));
+
     std::cout << ("ALL TESTS PASSED") << std::endl;
     return 0;
 }
