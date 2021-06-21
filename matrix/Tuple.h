@@ -17,10 +17,12 @@ struct Tuple {
 
 struct Point: public Tuple {
     Point(float x, float y, float z);
+    Point();
 };
 
 struct Vector: public Tuple {
     Vector(float x, float y, float z);
+    Vector();
 };
 
 bool equal(const float &a, const float &b);
@@ -29,7 +31,9 @@ bool equal(const Tuple &a, const Tuple &b);
 
 float magnitude(const Vector &v);
 
-void normalize(Vector &v);
+Vector norm(Vector &v);
+
+Vector cross(const Vector &a, const Vector &b);
 
 float dot(const Vector &a, const Vector &b);
 

@@ -1,6 +1,7 @@
 #include "Tuple.h"
 #include <cassert>
 #include <iostream>
+#include <cmath>
 
 int main() {
     float x{4.482}; 
@@ -38,6 +39,32 @@ int main() {
 
     assert(equal(Tuple(3.5, -7, 10.5, -14), a*3.5));
     assert(equal(Tuple(0.5, -1, 1.5, -2), a*0.5));
+
+    v1 = Vector(1, 0, 0);
+    assert(magnitude(v1) == 1);
+    v1 = Vector(0, 1, 0);
+    assert(magnitude(v1) == 1);
+    v1 = Vector(0, 0, 1);
+    assert(magnitude(v1) == 1);
+    v1 = Vector(1, 2, 3);
+    assert(equal(magnitude(v1), sqrt(14)));
+    v1 = Vector(-1, -2, -3);
+    assert(equal(magnitude(v1), sqrt(14)));
+
+    v1 = Vector(4, 0, 0);
+    assert(equal(norm(v1), Vector(1, 0, 0)));
+    v1 = Vector(1, 2, 3);
+    assert(equal(norm(v1), Vector(0.26726, 0.53452, 0.80178)));
+    v1 = Vector(1, 2, 3);
+    Vector n = norm(v1);
+    assert(equal(magnitude(n), 1));
+
+    v1 = Vector(1, 2, 3);
+    v2 = Vector(2, 3, 4);
+    assert(dot(v1, v2) == 20);
+    assert(equal(cross(v1, v2), Vector(-1, 2, -1)));
+    assert(equal(cross(v2, v1), Vector(1, -2, 1)));
+
 
     std::cout << ("ALL TESTS PASSED") << std::endl;
     return 0;

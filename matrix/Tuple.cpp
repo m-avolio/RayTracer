@@ -46,30 +46,46 @@ Tuple Tuple::operator/(const float &b) {
 }
 
 Point::Point(float x, float y, float z) {
-        this->x = x;
-        this->y = y;
-        this->z = z;
-        this->w = 1;
+    this->x = x;
+    this->y = y;
+    this->z = z;
+    this->w = 1;
+}
+
+Point::Point() {
+    this->x = 0;
+    this->y = 0;
+    this->z = 0;
+    this->w = 1;
 }
 
 Vector::Vector(float x, float y, float z) {
-        this->x = x;
-        this->y = y;
-        this->z = z;
-        this->w = 0;
+    this->x = x;
+    this->y = y;
+    this->z = z;
+    this->w = 0;
+}
+
+Vector::Vector() {
+    this->x = 0;
+    this->y = 0;
+    this->z = 0;
+    this->w = 0;
 }
 
 // Helper Functions
-void normalize(Vector &v) {
+Vector norm(Vector &v) {
+    Vector vector;
     float mag = magnitude(v);
-    v.x = v.x / mag;
-    v.y = v.y / mag;
-    v.z = v.z / mag;
-    v.w = v.w / mag;
+    vector.x = v.x / mag;
+    vector.y = v.y / mag;
+    vector.z = v.z / mag;
+    vector.w = v.w / mag;
+    return vector;
 }
 
 float magnitude(const Vector &v) {
-    return sqrt(v.x*v.x + v.y+v.y + v.z*v.z + v.w*v.w);
+    return sqrt(v.x*v.x + v.y*v.y + v.z*v.z + v.w*v.w);
 }
 
 float dot(const Vector &a, const Vector &b) {
