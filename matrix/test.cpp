@@ -22,6 +22,18 @@ int main() {
     Point p1(3, 2, 1);
     Point p2(5, 6, 7);
     assert(equal(Vector(-2, -4, -6), p1 - p2));
+    
+    Vector v1(5, 6, 7);
+    assert(equal(Point(-2, -4, -6), p1 - v1));
+    Vector v2(3, 2, 1);
+    assert(equal(Vector(-2, -4, -6), v2 - v1));
+
+    Vector zero(0, 0, 0);
+    v1 = Vector(1, -2, 3);
+    assert(equal(Vector(-1, 2, -3), zero - v1));
+
+    a = Tuple(1, -2, 3, -4);
+    assert(equal(Tuple(-1, 2, -3, 4), -a));
 
     std::cout << ("ALL TESTS PASSED") << std::endl;
     return 0;
