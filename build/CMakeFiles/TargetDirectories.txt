@@ -1,0 +1,11 @@
+/home/mavolio/RayTracer/build/CMakeFiles/rebuild_cache.dir
+/home/mavolio/RayTracer/build/CMakeFiles/edit_cache.dir
+/home/mavolio/RayTracer/build/CMakeFiles/test.dir
+/home/mavolio/RayTracer/build/src/CMakeFiles/rebuild_cache.dir
+/home/mavolio/RayTracer/build/src/CMakeFiles/edit_cache.dir
+/home/mavolio/RayTracer/build/src/CMakeFiles/test.dir
+/home/mavolio/RayTracer/build/src/CMakeFiles/Src.dir
+/home/mavolio/RayTracer/build/test/CMakeFiles/rebuild_cache.dir
+/home/mavolio/RayTracer/build/test/CMakeFiles/edit_cache.dir
+/home/mavolio/RayTracer/build/test/CMakeFiles/test.dir
+/home/mavolio/RayTracer/build/test/CMakeFiles/Test.dir

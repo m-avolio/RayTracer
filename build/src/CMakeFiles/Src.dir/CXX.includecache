@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mavolio/RayTracer/src/Canvas.cpp
+Canvas.h
+/home/mavolio/RayTracer/src/Canvas.h
+
+/home/mavolio/RayTracer/src/Canvas.h
+Colour.h
+/home/mavolio/RayTracer/src/Colour.h
+vector
+-
+string
+-
+iostream
+-
+fstream
+-
+cmath
+-
+
+/home/mavolio/RayTracer/src/Colour.h
+
