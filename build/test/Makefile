@@ -122,19 +122,34 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-test/CMakeFiles/Test.dir/rule:
-	cd /home/mavolio/RayTracer/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/Test.dir/rule
-.PHONY : test/CMakeFiles/Test.dir/rule
+test/CMakeFiles/tuple.dir/rule:
+	cd /home/mavolio/RayTracer/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/tuple.dir/rule
+.PHONY : test/CMakeFiles/tuple.dir/rule
 
 # Convenience name for target.
-Test: test/CMakeFiles/Test.dir/rule
+tuple: test/CMakeFiles/tuple.dir/rule
 
-.PHONY : Test
+.PHONY : tuple
 
 # fast build rule for target.
-Test/fast:
-	cd /home/mavolio/RayTracer/build && $(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/build
-.PHONY : Test/fast
+tuple/fast:
+	cd /home/mavolio/RayTracer/build && $(MAKE) -f test/CMakeFiles/tuple.dir/build.make test/CMakeFiles/tuple.dir/build
+.PHONY : tuple/fast
+
+# Convenience name for target.
+test/CMakeFiles/canvas.dir/rule:
+	cd /home/mavolio/RayTracer/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/canvas.dir/rule
+.PHONY : test/CMakeFiles/canvas.dir/rule
+
+# Convenience name for target.
+canvas: test/CMakeFiles/canvas.dir/rule
+
+.PHONY : canvas
+
+# fast build rule for target.
+canvas/fast:
+	cd /home/mavolio/RayTracer/build && $(MAKE) -f test/CMakeFiles/canvas.dir/build.make test/CMakeFiles/canvas.dir/build
+.PHONY : canvas/fast
 
 canvas_test.o: canvas_test.cpp.o
 
@@ -142,7 +157,7 @@ canvas_test.o: canvas_test.cpp.o
 
 # target to build an object file
 canvas_test.cpp.o:
-	cd /home/mavolio/RayTracer/build && $(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/canvas_test.cpp.o
+	cd /home/mavolio/RayTracer/build && $(MAKE) -f test/CMakeFiles/canvas.dir/build.make test/CMakeFiles/canvas.dir/canvas_test.cpp.o
 .PHONY : canvas_test.cpp.o
 
 canvas_test.i: canvas_test.cpp.i
@@ -151,7 +166,7 @@ canvas_test.i: canvas_test.cpp.i
 
 # target to preprocess a source file
 canvas_test.cpp.i:
-	cd /home/mavolio/RayTracer/build && $(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/canvas_test.cpp.i
+	cd /home/mavolio/RayTracer/build && $(MAKE) -f test/CMakeFiles/canvas.dir/build.make test/CMakeFiles/canvas.dir/canvas_test.cpp.i
 .PHONY : canvas_test.cpp.i
 
 canvas_test.s: canvas_test.cpp.s
@@ -160,8 +175,35 @@ canvas_test.s: canvas_test.cpp.s
 
 # target to generate assembly for a file
 canvas_test.cpp.s:
-	cd /home/mavolio/RayTracer/build && $(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/canvas_test.cpp.s
+	cd /home/mavolio/RayTracer/build && $(MAKE) -f test/CMakeFiles/canvas.dir/build.make test/CMakeFiles/canvas.dir/canvas_test.cpp.s
 .PHONY : canvas_test.cpp.s
+
+tuple_test.o: tuple_test.cpp.o
+
+.PHONY : tuple_test.o
+
+# target to build an object file
+tuple_test.cpp.o:
+	cd /home/mavolio/RayTracer/build && $(MAKE) -f test/CMakeFiles/tuple.dir/build.make test/CMakeFiles/tuple.dir/tuple_test.cpp.o
+.PHONY : tuple_test.cpp.o
+
+tuple_test.i: tuple_test.cpp.i
+
+.PHONY : tuple_test.i
+
+# target to preprocess a source file
+tuple_test.cpp.i:
+	cd /home/mavolio/RayTracer/build && $(MAKE) -f test/CMakeFiles/tuple.dir/build.make test/CMakeFiles/tuple.dir/tuple_test.cpp.i
+.PHONY : tuple_test.cpp.i
+
+tuple_test.s: tuple_test.cpp.s
+
+.PHONY : tuple_test.s
+
+# target to generate assembly for a file
+tuple_test.cpp.s:
+	cd /home/mavolio/RayTracer/build && $(MAKE) -f test/CMakeFiles/tuple.dir/build.make test/CMakeFiles/tuple.dir/tuple_test.cpp.s
+.PHONY : tuple_test.cpp.s
 
 # Help Target
 help:
@@ -170,12 +212,16 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... tuple"
 	@echo "... edit_cache"
 	@echo "... test"
-	@echo "... Test"
+	@echo "... canvas"
 	@echo "... canvas_test.o"
 	@echo "... canvas_test.i"
 	@echo "... canvas_test.s"
+	@echo "... tuple_test.o"
+	@echo "... tuple_test.i"
+	@echo "... tuple_test.s"
 .PHONY : help
 
 

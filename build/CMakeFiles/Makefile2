@@ -92,7 +92,8 @@ src/clean: src/CMakeFiles/Src.dir/clean
 # Directory level rules for directory test
 
 # Recursive "all" directory target.
-test/all: test/CMakeFiles/Test.dir/all
+test/all: test/CMakeFiles/tuple.dir/all
+test/all: test/CMakeFiles/canvas.dir/all
 
 .PHONY : test/all
 
@@ -102,7 +103,8 @@ test/preinstall:
 .PHONY : test/preinstall
 
 # Recursive "clean" directory target.
-test/clean: test/CMakeFiles/Test.dir/clean
+test/clean: test/CMakeFiles/tuple.dir/clean
+test/clean: test/CMakeFiles/canvas.dir/clean
 
 .PHONY : test/clean
 
@@ -134,31 +136,58 @@ src/CMakeFiles/Src.dir/clean:
 .PHONY : src/CMakeFiles/Src.dir/clean
 
 #=============================================================================
-# Target rules for target test/CMakeFiles/Test.dir
+# Target rules for target test/CMakeFiles/tuple.dir
 
 # All Build rule for target.
-test/CMakeFiles/Test.dir/all: src/CMakeFiles/Src.dir/all
-	$(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/depend
-	$(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mavolio/RayTracer/build/CMakeFiles --progress-num=5,6 "Built target Test"
-.PHONY : test/CMakeFiles/Test.dir/all
+test/CMakeFiles/tuple.dir/all: src/CMakeFiles/Src.dir/all
+	$(MAKE) -f test/CMakeFiles/tuple.dir/build.make test/CMakeFiles/tuple.dir/depend
+	$(MAKE) -f test/CMakeFiles/tuple.dir/build.make test/CMakeFiles/tuple.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mavolio/RayTracer/build/CMakeFiles --progress-num=7,8 "Built target tuple"
+.PHONY : test/CMakeFiles/tuple.dir/all
 
 # Build rule for subdir invocation for target.
-test/CMakeFiles/Test.dir/rule: cmake_check_build_system
+test/CMakeFiles/tuple.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mavolio/RayTracer/build/CMakeFiles 6
-	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/Test.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/tuple.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mavolio/RayTracer/build/CMakeFiles 0
-.PHONY : test/CMakeFiles/Test.dir/rule
+.PHONY : test/CMakeFiles/tuple.dir/rule
 
 # Convenience name for target.
-Test: test/CMakeFiles/Test.dir/rule
+tuple: test/CMakeFiles/tuple.dir/rule
 
-.PHONY : Test
+.PHONY : tuple
 
 # clean rule for target.
-test/CMakeFiles/Test.dir/clean:
-	$(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/clean
-.PHONY : test/CMakeFiles/Test.dir/clean
+test/CMakeFiles/tuple.dir/clean:
+	$(MAKE) -f test/CMakeFiles/tuple.dir/build.make test/CMakeFiles/tuple.dir/clean
+.PHONY : test/CMakeFiles/tuple.dir/clean
+
+#=============================================================================
+# Target rules for target test/CMakeFiles/canvas.dir
+
+# All Build rule for target.
+test/CMakeFiles/canvas.dir/all: src/CMakeFiles/Src.dir/all
+	$(MAKE) -f test/CMakeFiles/canvas.dir/build.make test/CMakeFiles/canvas.dir/depend
+	$(MAKE) -f test/CMakeFiles/canvas.dir/build.make test/CMakeFiles/canvas.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mavolio/RayTracer/build/CMakeFiles --progress-num=5,6 "Built target canvas"
+.PHONY : test/CMakeFiles/canvas.dir/all
+
+# Build rule for subdir invocation for target.
+test/CMakeFiles/canvas.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mavolio/RayTracer/build/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/canvas.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mavolio/RayTracer/build/CMakeFiles 0
+.PHONY : test/CMakeFiles/canvas.dir/rule
+
+# Convenience name for target.
+canvas: test/CMakeFiles/canvas.dir/rule
+
+.PHONY : canvas
+
+# clean rule for target.
+test/CMakeFiles/canvas.dir/clean:
+	$(MAKE) -f test/CMakeFiles/canvas.dir/build.make test/CMakeFiles/canvas.dir/clean
+.PHONY : test/CMakeFiles/canvas.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

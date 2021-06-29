@@ -135,17 +135,30 @@ Src/fast:
 .PHONY : Src/fast
 
 #=============================================================================
-# Target rules for targets named Test
+# Target rules for targets named tuple
 
 # Build rule for target.
-Test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Test
-.PHONY : Test
+tuple: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tuple
+.PHONY : tuple
 
 # fast build rule for target.
-Test/fast:
-	$(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/build
-.PHONY : Test/fast
+tuple/fast:
+	$(MAKE) -f test/CMakeFiles/tuple.dir/build.make test/CMakeFiles/tuple.dir/build
+.PHONY : tuple/fast
+
+#=============================================================================
+# Target rules for targets named canvas
+
+# Build rule for target.
+canvas: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 canvas
+.PHONY : canvas
+
+# fast build rule for target.
+canvas/fast:
+	$(MAKE) -f test/CMakeFiles/canvas.dir/build.make test/CMakeFiles/canvas.dir/build
+.PHONY : canvas/fast
 
 # Help Target
 help:
@@ -157,7 +170,8 @@ help:
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... Src"
-	@echo "... Test"
+	@echo "... tuple"
+	@echo "... canvas"
 .PHONY : help
 
 

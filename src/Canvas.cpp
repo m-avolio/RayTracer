@@ -31,6 +31,9 @@ void Canvas::to_ppm(std::string name) {
             int blue = (pixel.blue > 1) ? 255 : 
                        (pixel.blue < 0) ? 0 : round(255*pixel.blue);
             outfile << red << " " <<  green << " " << blue << " ";
+            if (j % 5 == 0) {
+                outfile << std::endl;
+            }
         }
         outfile << std::endl;
     }

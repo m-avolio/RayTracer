@@ -6,6 +6,7 @@
 /home/mavolio/RayTracer/build/src/CMakeFiles/test.dir
 /home/mavolio/RayTracer/build/src/CMakeFiles/Src.dir
 /home/mavolio/RayTracer/build/test/CMakeFiles/rebuild_cache.dir
+/home/mavolio/RayTracer/build/test/CMakeFiles/tuple.dir
 /home/mavolio/RayTracer/build/test/CMakeFiles/edit_cache.dir
 /home/mavolio/RayTracer/build/test/CMakeFiles/test.dir
-/home/mavolio/RayTracer/build/test/CMakeFiles/Test.dir
+/home/mavolio/RayTracer/build/test/CMakeFiles/canvas.dir

@@ -70,5 +70,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/Src.dir/DependInfo.cmake"
-  "test/CMakeFiles/Test.dir/DependInfo.cmake"
+  "test/CMakeFiles/tuple.dir/DependInfo.cmake"
+  "test/CMakeFiles/canvas.dir/DependInfo.cmake"
   )

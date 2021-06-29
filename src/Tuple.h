@@ -4,25 +4,28 @@
 #include <cmath>
 #define EPSILON 0.00001
 
-struct Tuple {
-    float x, y, z, w;
-    Tuple() {};
-    Tuple(float x, float y, float z, float w): x{x}, y{y}, z{z}, w{w} {} 
-    Tuple operator+(const Tuple &b);
-    Tuple operator-(const Tuple &b);
-    Tuple operator-();
-    Tuple operator*(const float &b);
-    Tuple operator/(const float &b);
+class Tuple {
+    public:
+        float x, y, z, w;
+        Tuple() {};
+        Tuple(float x, float y, float z, float w): x{x}, y{y}, z{z}, w{w} {} 
+        Tuple operator+(const Tuple &b);
+        Tuple operator-(const Tuple &b);
+        Tuple operator-();
+        Tuple operator*(const float &b);
+        Tuple operator/(const float &b);
 };
 
-struct Point: public Tuple {
-    Point(float x, float y, float z);
-    Point();
+class Point: public Tuple {
+    public:
+        Point(float x, float y, float z);
+        Point();
 };
 
-struct Vector: public Tuple {
-    Vector(float x, float y, float z);
-    Vector();
+class Vector: public Tuple {
+    public:
+        Vector(float x, float y, float z);
+        Vector();
 };
 
 bool equal(const float &a, const float &b);
