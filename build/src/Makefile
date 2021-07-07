@@ -190,6 +190,33 @@ Colour.cpp.s:
 	cd /home/mavolio/RayTracer/build && $(MAKE) -f src/CMakeFiles/Src.dir/build.make src/CMakeFiles/Src.dir/Colour.cpp.s
 .PHONY : Colour.cpp.s
 
+Matrix.o: Matrix.cpp.o
+
+.PHONY : Matrix.o
+
+# target to build an object file
+Matrix.cpp.o:
+	cd /home/mavolio/RayTracer/build && $(MAKE) -f src/CMakeFiles/Src.dir/build.make src/CMakeFiles/Src.dir/Matrix.cpp.o
+.PHONY : Matrix.cpp.o
+
+Matrix.i: Matrix.cpp.i
+
+.PHONY : Matrix.i
+
+# target to preprocess a source file
+Matrix.cpp.i:
+	cd /home/mavolio/RayTracer/build && $(MAKE) -f src/CMakeFiles/Src.dir/build.make src/CMakeFiles/Src.dir/Matrix.cpp.i
+.PHONY : Matrix.cpp.i
+
+Matrix.s: Matrix.cpp.s
+
+.PHONY : Matrix.s
+
+# target to generate assembly for a file
+Matrix.cpp.s:
+	cd /home/mavolio/RayTracer/build && $(MAKE) -f src/CMakeFiles/Src.dir/build.make src/CMakeFiles/Src.dir/Matrix.cpp.s
+.PHONY : Matrix.cpp.s
+
 Tuple.o: Tuple.cpp.o
 
 .PHONY : Tuple.o
@@ -233,6 +260,9 @@ help:
 	@echo "... Colour.o"
 	@echo "... Colour.i"
 	@echo "... Colour.s"
+	@echo "... Matrix.o"
+	@echo "... Matrix.i"
+	@echo "... Matrix.s"
 	@echo "... Tuple.o"
 	@echo "... Tuple.i"
 	@echo "... Tuple.s"

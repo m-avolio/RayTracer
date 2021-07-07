@@ -6,27 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/mavolio/RayTracer/src/Canvas.cpp
-Canvas.h
-/home/mavolio/RayTracer/src/Canvas.h
+/home/mavolio/RayTracer/src/Matrix.cpp
+Matrix.h
+/home/mavolio/RayTracer/src/Matrix.h
 
-/home/mavolio/RayTracer/src/Canvas.h
-Colour.h
-/home/mavolio/RayTracer/src/Colour.h
+/home/mavolio/RayTracer/src/Matrix.h
+Tuple.h
+/home/mavolio/RayTracer/src/Tuple.h
 vector
 -
-string
--
-iostream
--
-fstream
--
+
+/home/mavolio/RayTracer/src/Tuple.h
 cmath
 -
-
-/home/mavolio/RayTracer/src/Colour.cpp
-Colour.h
-/home/mavolio/RayTracer/src/Colour.h
-
-/home/mavolio/RayTracer/src/Colour.h
 

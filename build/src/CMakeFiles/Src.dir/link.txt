@@ -1,2 +1,2 @@
-/usr/bin/ar qc libSrc.a  CMakeFiles/Src.dir/Tuple.cpp.o CMakeFiles/Src.dir/Colour.cpp.o CMakeFiles/Src.dir/Canvas.cpp.o
+/usr/bin/ar qc libSrc.a  CMakeFiles/Src.dir/Tuple.cpp.o CMakeFiles/Src.dir/Colour.cpp.o CMakeFiles/Src.dir/Canvas.cpp.o CMakeFiles/Src.dir/Matrix.cpp.o
 /usr/bin/ranlib libSrc.a

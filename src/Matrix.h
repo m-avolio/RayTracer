@@ -8,10 +8,11 @@ class Matrix {
     //access with row, column
     public:
         int size;
-        Matrix(int size): size{size} {}; 
+        Matrix(int size);
         std::vector<float> & operator[](int index);
         Matrix operator*(const Matrix &b);
         Tuple operator*(const Tuple &b);
+        void init(std::vector<std::vector<float>> m);
 
     private:
         std::vector<std::vector<float>> matrix;

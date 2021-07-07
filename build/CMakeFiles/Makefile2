@@ -92,6 +92,7 @@ src/clean: src/CMakeFiles/Src.dir/clean
 # Directory level rules for directory test
 
 # Recursive "all" directory target.
+test/all: test/CMakeFiles/matrix.dir/all
 test/all: test/CMakeFiles/tuple.dir/all
 test/all: test/CMakeFiles/canvas.dir/all
 
@@ -103,6 +104,7 @@ test/preinstall:
 .PHONY : test/preinstall
 
 # Recursive "clean" directory target.
+test/clean: test/CMakeFiles/matrix.dir/clean
 test/clean: test/CMakeFiles/tuple.dir/clean
 test/clean: test/CMakeFiles/canvas.dir/clean
 
@@ -115,12 +117,12 @@ test/clean: test/CMakeFiles/canvas.dir/clean
 src/CMakeFiles/Src.dir/all:
 	$(MAKE) -f src/CMakeFiles/Src.dir/build.make src/CMakeFiles/Src.dir/depend
 	$(MAKE) -f src/CMakeFiles/Src.dir/build.make src/CMakeFiles/Src.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mavolio/RayTracer/build/CMakeFiles --progress-num=1,2,3,4 "Built target Src"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mavolio/RayTracer/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target Src"
 .PHONY : src/CMakeFiles/Src.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/Src.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mavolio/RayTracer/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mavolio/RayTracer/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/Src.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mavolio/RayTracer/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/Src.dir/rule
@@ -136,18 +138,45 @@ src/CMakeFiles/Src.dir/clean:
 .PHONY : src/CMakeFiles/Src.dir/clean
 
 #=============================================================================
+# Target rules for target test/CMakeFiles/matrix.dir
+
+# All Build rule for target.
+test/CMakeFiles/matrix.dir/all: src/CMakeFiles/Src.dir/all
+	$(MAKE) -f test/CMakeFiles/matrix.dir/build.make test/CMakeFiles/matrix.dir/depend
+	$(MAKE) -f test/CMakeFiles/matrix.dir/build.make test/CMakeFiles/matrix.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mavolio/RayTracer/build/CMakeFiles --progress-num=8,9 "Built target matrix"
+.PHONY : test/CMakeFiles/matrix.dir/all
+
+# Build rule for subdir invocation for target.
+test/CMakeFiles/matrix.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mavolio/RayTracer/build/CMakeFiles 7
+	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/matrix.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mavolio/RayTracer/build/CMakeFiles 0
+.PHONY : test/CMakeFiles/matrix.dir/rule
+
+# Convenience name for target.
+matrix: test/CMakeFiles/matrix.dir/rule
+
+.PHONY : matrix
+
+# clean rule for target.
+test/CMakeFiles/matrix.dir/clean:
+	$(MAKE) -f test/CMakeFiles/matrix.dir/build.make test/CMakeFiles/matrix.dir/clean
+.PHONY : test/CMakeFiles/matrix.dir/clean
+
+#=============================================================================
 # Target rules for target test/CMakeFiles/tuple.dir
 
 # All Build rule for target.
 test/CMakeFiles/tuple.dir/all: src/CMakeFiles/Src.dir/all
 	$(MAKE) -f test/CMakeFiles/tuple.dir/build.make test/CMakeFiles/tuple.dir/depend
 	$(MAKE) -f test/CMakeFiles/tuple.dir/build.make test/CMakeFiles/tuple.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mavolio/RayTracer/build/CMakeFiles --progress-num=7,8 "Built target tuple"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mavolio/RayTracer/build/CMakeFiles --progress-num=10,11 "Built target tuple"
 .PHONY : test/CMakeFiles/tuple.dir/all
 
 # Build rule for subdir invocation for target.
 test/CMakeFiles/tuple.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mavolio/RayTracer/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mavolio/RayTracer/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/tuple.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mavolio/RayTracer/build/CMakeFiles 0
 .PHONY : test/CMakeFiles/tuple.dir/rule
@@ -169,12 +198,12 @@ test/CMakeFiles/tuple.dir/clean:
 test/CMakeFiles/canvas.dir/all: src/CMakeFiles/Src.dir/all
 	$(MAKE) -f test/CMakeFiles/canvas.dir/build.make test/CMakeFiles/canvas.dir/depend
 	$(MAKE) -f test/CMakeFiles/canvas.dir/build.make test/CMakeFiles/canvas.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mavolio/RayTracer/build/CMakeFiles --progress-num=5,6 "Built target canvas"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mavolio/RayTracer/build/CMakeFiles --progress-num=6,7 "Built target canvas"
 .PHONY : test/CMakeFiles/canvas.dir/all
 
 # Build rule for subdir invocation for target.
 test/CMakeFiles/canvas.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mavolio/RayTracer/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mavolio/RayTracer/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/canvas.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mavolio/RayTracer/build/CMakeFiles 0
 .PHONY : test/CMakeFiles/canvas.dir/rule

@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/mavolio/RayTracer/src/Canvas.cpp" "/home/mavolio/RayTracer/build/src/CMakeFiles/Src.dir/Canvas.cpp.o"
   "/home/mavolio/RayTracer/src/Colour.cpp" "/home/mavolio/RayTracer/build/src/CMakeFiles/Src.dir/Colour.cpp.o"
+  "/home/mavolio/RayTracer/src/Matrix.cpp" "/home/mavolio/RayTracer/build/src/CMakeFiles/Src.dir/Matrix.cpp.o"
   "/home/mavolio/RayTracer/src/Tuple.cpp" "/home/mavolio/RayTracer/build/src/CMakeFiles/Src.dir/Tuple.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

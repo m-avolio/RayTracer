@@ -122,6 +122,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+test/CMakeFiles/matrix.dir/rule:
+	cd /home/mavolio/RayTracer/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/matrix.dir/rule
+.PHONY : test/CMakeFiles/matrix.dir/rule
+
+# Convenience name for target.
+matrix: test/CMakeFiles/matrix.dir/rule
+
+.PHONY : matrix
+
+# fast build rule for target.
+matrix/fast:
+	cd /home/mavolio/RayTracer/build && $(MAKE) -f test/CMakeFiles/matrix.dir/build.make test/CMakeFiles/matrix.dir/build
+.PHONY : matrix/fast
+
+# Convenience name for target.
 test/CMakeFiles/tuple.dir/rule:
 	cd /home/mavolio/RayTracer/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/tuple.dir/rule
 .PHONY : test/CMakeFiles/tuple.dir/rule
@@ -178,6 +193,33 @@ canvas_test.cpp.s:
 	cd /home/mavolio/RayTracer/build && $(MAKE) -f test/CMakeFiles/canvas.dir/build.make test/CMakeFiles/canvas.dir/canvas_test.cpp.s
 .PHONY : canvas_test.cpp.s
 
+matrix_test.o: matrix_test.cpp.o
+
+.PHONY : matrix_test.o
+
+# target to build an object file
+matrix_test.cpp.o:
+	cd /home/mavolio/RayTracer/build && $(MAKE) -f test/CMakeFiles/matrix.dir/build.make test/CMakeFiles/matrix.dir/matrix_test.cpp.o
+.PHONY : matrix_test.cpp.o
+
+matrix_test.i: matrix_test.cpp.i
+
+.PHONY : matrix_test.i
+
+# target to preprocess a source file
+matrix_test.cpp.i:
+	cd /home/mavolio/RayTracer/build && $(MAKE) -f test/CMakeFiles/matrix.dir/build.make test/CMakeFiles/matrix.dir/matrix_test.cpp.i
+.PHONY : matrix_test.cpp.i
+
+matrix_test.s: matrix_test.cpp.s
+
+.PHONY : matrix_test.s
+
+# target to generate assembly for a file
+matrix_test.cpp.s:
+	cd /home/mavolio/RayTracer/build && $(MAKE) -f test/CMakeFiles/matrix.dir/build.make test/CMakeFiles/matrix.dir/matrix_test.cpp.s
+.PHONY : matrix_test.cpp.s
+
 tuple_test.o: tuple_test.cpp.o
 
 .PHONY : tuple_test.o
@@ -212,6 +254,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... matrix"
 	@echo "... tuple"
 	@echo "... edit_cache"
 	@echo "... test"
@@ -219,6 +262,9 @@ help:
 	@echo "... canvas_test.o"
 	@echo "... canvas_test.i"
 	@echo "... canvas_test.s"
+	@echo "... matrix_test.o"
+	@echo "... matrix_test.i"
+	@echo "... matrix_test.s"
 	@echo "... tuple_test.o"
 	@echo "... tuple_test.i"
 	@echo "... tuple_test.s"

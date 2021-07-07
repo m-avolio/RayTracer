@@ -135,6 +135,19 @@ Src/fast:
 .PHONY : Src/fast
 
 #=============================================================================
+# Target rules for targets named matrix
+
+# Build rule for target.
+matrix: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 matrix
+.PHONY : matrix
+
+# fast build rule for target.
+matrix/fast:
+	$(MAKE) -f test/CMakeFiles/matrix.dir/build.make test/CMakeFiles/matrix.dir/build
+.PHONY : matrix/fast
+
+#=============================================================================
 # Target rules for targets named tuple
 
 # Build rule for target.
@@ -170,6 +183,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... Src"
+	@echo "... matrix"
 	@echo "... tuple"
 	@echo "... canvas"
 .PHONY : help

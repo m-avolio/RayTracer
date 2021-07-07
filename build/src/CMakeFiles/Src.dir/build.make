@@ -96,11 +96,25 @@ src/CMakeFiles/Src.dir/Canvas.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Src.dir/Canvas.cpp.s"
 	cd /home/mavolio/RayTracer/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mavolio/RayTracer/src/Canvas.cpp -o CMakeFiles/Src.dir/Canvas.cpp.s
 
+src/CMakeFiles/Src.dir/Matrix.cpp.o: src/CMakeFiles/Src.dir/flags.make
+src/CMakeFiles/Src.dir/Matrix.cpp.o: ../src/Matrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mavolio/RayTracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/Src.dir/Matrix.cpp.o"
+	cd /home/mavolio/RayTracer/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Src.dir/Matrix.cpp.o -c /home/mavolio/RayTracer/src/Matrix.cpp
+
+src/CMakeFiles/Src.dir/Matrix.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Src.dir/Matrix.cpp.i"
+	cd /home/mavolio/RayTracer/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mavolio/RayTracer/src/Matrix.cpp > CMakeFiles/Src.dir/Matrix.cpp.i
+
+src/CMakeFiles/Src.dir/Matrix.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Src.dir/Matrix.cpp.s"
+	cd /home/mavolio/RayTracer/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mavolio/RayTracer/src/Matrix.cpp -o CMakeFiles/Src.dir/Matrix.cpp.s
+
 # Object files for target Src
 Src_OBJECTS = \
 "CMakeFiles/Src.dir/Tuple.cpp.o" \
 "CMakeFiles/Src.dir/Colour.cpp.o" \
-"CMakeFiles/Src.dir/Canvas.cpp.o"
+"CMakeFiles/Src.dir/Canvas.cpp.o" \
+"CMakeFiles/Src.dir/Matrix.cpp.o"
 
 # External object files for target Src
 Src_EXTERNAL_OBJECTS =
@@ -108,9 +122,10 @@ Src_EXTERNAL_OBJECTS =
 src/libSrc.a: src/CMakeFiles/Src.dir/Tuple.cpp.o
 src/libSrc.a: src/CMakeFiles/Src.dir/Colour.cpp.o
 src/libSrc.a: src/CMakeFiles/Src.dir/Canvas.cpp.o
+src/libSrc.a: src/CMakeFiles/Src.dir/Matrix.cpp.o
 src/libSrc.a: src/CMakeFiles/Src.dir/build.make
 src/libSrc.a: src/CMakeFiles/Src.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mavolio/RayTracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libSrc.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mavolio/RayTracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libSrc.a"
 	cd /home/mavolio/RayTracer/build/src && $(CMAKE_COMMAND) -P CMakeFiles/Src.dir/cmake_clean_target.cmake
 	cd /home/mavolio/RayTracer/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Src.dir/link.txt --verbose=$(VERBOSE)
 

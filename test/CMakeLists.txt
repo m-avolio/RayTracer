@@ -5,6 +5,7 @@ include_directories (${TEST_SOURCE_DIR}/src
 add_definitions (-DBOOST_TEST_DYN_LINK)
 add_executable (canvas canvas_test.cpp)
 add_executable (tuple tuple_test.cpp)
+add_executable (matrix matrix_test.cpp)
 target_link_libraries (canvas
                        Src
                        ${Boost_FILESYSTEM_LIBRARY}
@@ -12,6 +13,12 @@ target_link_libraries (canvas
                        ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY}
                        )
 target_link_libraries (tuple
+                       Src
+                       ${Boost_FILESYSTEM_LIBRARY}
+                       ${Boost_SYSTEM_LIBRARY}
+                       ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY}
+                       )
+target_link_libraries (matrix
                        Src
                        ${Boost_FILESYSTEM_LIBRARY}
                        ${Boost_SYSTEM_LIBRARY}
