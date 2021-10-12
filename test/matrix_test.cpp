@@ -35,6 +35,37 @@ int main() {
             {8, 6, 4, 1},
             {0, 0, 0, 1}});
     assert(equal(a*tuple, Tuple(18, 24, 33, 1)));
+    //determinant of 2x2 matrix
+    Matrix d(2);
+    d.init({{1, 5},
+            {-3, 2}});
+    assert(d.determinant() == 17);
+    //submatrix
+    Matrix e(3);
+    e.init({{1, 3, 5},
+            {4, 5, 12},
+            {-3, 44, 2}});
+    assert(equal(d, e.submatrix(1, 1)));
+    //cofactor 
+    assert(-44 == e.cofactor(0,1));
+    //determinant of 4x4 matrix
+    a.init({{6, 4, 4, 4},
+            {5, 5, 7, 6},
+            {4, -9, 3, -7},
+            {9, 1, 7, -6}});
+    assert(-2120 == a.determinant());
+    //inverting a matrix
+    a.init({{8, -5, 9, 2},
+            {7, 5, 6, 1},
+            {-6, 0, 9, 6},
+            {-3, 0, -9, -4}});
+    Matrix inv(4);
+    inv.init({{-0.15385, -0.15385, -0.28205, -0.53846},
+              {-0.07692, 0.12308, 0.02564, 0.03077},
+              {0.35897, 0.35897, 0.43590, 0.92308},
+              {-0.69231, -0.69231, -0.76923, -1.92308}});
+    assert(equal(inv, a.inverse()));
+    assert(equal(a, (a*b)*(b.inverse())));
     std::cout << "ALL TESTS PASSED" << std::endl;
     return 0;
 }

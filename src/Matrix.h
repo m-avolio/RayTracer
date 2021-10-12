@@ -3,6 +3,7 @@
 #include "Tuple.h"
 #include <vector>
 #include <iostream>
+#include <cassert>
 
 // only need 2x2, 3x3 and 4x4 matrix
 class Matrix {
@@ -16,6 +17,12 @@ class Matrix {
         void init(std::vector<std::vector<float>> m);
         void print() const;
         Matrix transpose() const;
+        float determinant() const;
+        Matrix submatrix(int row, int col) const;
+        float cofactor(int row, int col) const;
+        bool invertible() const;
+        Matrix inverse() const;
+
     private:
         std::vector<std::vector<float>> matrix;
 };

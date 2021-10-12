@@ -42,9 +42,10 @@ Tuple Matrix::operator*(const Tuple &b) const{
 }
 
 void Matrix::print() const{
+    std::cout.precision(5);
     for (int i{0}; i < this->size; i++) {
         for (int j{0}; j < this->size; j++) {
-            std::cout << matrix[i][j] << " ";
+            std::cout << std::fixed << matrix[i][j] << " ";
         }
         std::cout << std::endl;
     }    
@@ -58,6 +59,51 @@ Matrix Matrix::transpose() const {
         }
     }
     return m;       
+}
+
+float Matrix::determinant() const {
+    float det{0};
+    if (this->size == 2) {
+        det = this->matrix[0][0]*this->matrix[1][1] - this->matrix[0][1]*this->matrix[1][0]; 
+    } else {
+        for (int i{0}; i < this->size; i++) {
+            det += this->matrix[0][i] * this->cofactor(0,i);
+        }
+    }
+    return det;
+}
+
+Matrix Matrix::submatrix(int row, int col) const {
+    assert(row < this->size && col < this->size);
+    Matrix m(this->size-1);
+    m.matrix = this->matrix;
+    m.matrix.erase(m.matrix.begin()+row);
+    for (int i{0}; i < m.size; i++) {
+        m.matrix[i].erase(m.matrix[i].begin()+col);
+    }
+    return m;
+}
+
+float Matrix::cofactor(int row, int col) const {
+    return (row+col)%2 == 0 ? submatrix(row, col).determinant() : -submatrix(row, col).determinant(); 
+}
+
+bool Matrix::invertible() const {
+    return this->determinant() == 0 ? false : true;
+}
+
+Matrix Matrix::inverse() const {
+    float det = this->determinant();
+    assert(det != 0); //check if invertible and get det
+
+    Matrix m(this->size);
+    for (int i{0}; i < this->size; i++) {
+        for (int j{0}; j < this->size; j++) {
+            float cofactor = this->cofactor(i, j);
+            m[j][i] = cofactor / det;
+        }
+    }
+    return m;
 }
 
 bool equal(Matrix a, Matrix b) {
