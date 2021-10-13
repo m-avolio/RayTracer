@@ -59,6 +59,33 @@ Point::Point() {
     this->w = 1;
 }
 
+Point Point::operator+(const Vector &b) {
+    Point point;
+    point.x = this->x + b.x;
+    point.y = this->y + b.y;
+    point.z = this->z + b.z;
+    point.w = this->w + b.w;
+    return point;
+}
+
+Vector Point::operator-(const Point &b) {
+    Vector vector;
+    vector.x = this->x - b.x;
+    vector.y = this->y - b.y;
+    vector.z = this->z - b.z;
+    vector.w = this->w - b.w;
+    return vector;
+}
+
+Point Point::operator-(const Vector &b) {
+    Point point;
+    point.x = this->x - b.x;
+    point.y = this->y - b.y;
+    point.z = this->z - b.z;
+    point.w = this->w - b.w;
+    return point;
+}
+
 Vector::Vector(float x, float y, float z) {
     this->x = x;
     this->y = y;
@@ -71,6 +98,51 @@ Vector::Vector() {
     this->y = 0;
     this->z = 0;
     this->w = 0;
+}
+
+Point Vector::operator+(const Point &b) {
+    Point point;
+    point.x = this->x + b.x;
+    point.y = this->y + b.y;
+    point.z = this->z + b.z;
+    point.w = this->w + b.w;
+    return point;
+}
+
+Vector Vector::operator+(const Vector &b) {
+    Vector vector;
+    vector.x = this->x + b.x;
+    vector.y = this->y + b.y;
+    vector.z = this->z + b.z;
+    vector.w = this->w + b.w;
+    return vector;
+}
+
+Vector Vector::operator-(const Vector &b) {
+    Vector vector;
+    vector.x = this->x - b.x;
+    vector.y = this->y - b.y;
+    vector.z = this->z - b.z;
+    vector.w = this->w - b.w;
+    return vector;
+}
+
+Vector Vector::operator*(const float &b) {
+    Vector vector;
+    vector.x = this->x * b;
+    vector.y = this->y * b;
+    vector.z = this->z * b;
+    vector.w = this->w * b;
+    return vector;
+}
+
+Vector Vector::operator/(const float &b) {
+    Vector vector;
+    vector.x = this->x / b;
+    vector.y = this->y / b;
+    vector.z = this->z / b;
+    vector.w = this->w / b;
+    return vector;
 }
 
 // Helper Functions

@@ -3,5 +3,6 @@ add_library (Src
              Colour.cpp Colour.h 
              Canvas.cpp Canvas.h
              Matrix.cpp Matrix.h
+             Ray.cpp Ray.h
              )
 target_link_libraries (Src)

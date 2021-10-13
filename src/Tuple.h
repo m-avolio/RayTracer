@@ -16,16 +16,27 @@ class Tuple {
         Tuple operator/(const float &b);
 };
 
+class Point;
+class Vector;
+
 class Point: public Tuple {
     public:
         Point(float x, float y, float z);
         Point();
+        Point operator+(const Vector &b);
+        Vector operator-(const Point &b);
+        Point operator-(const Vector &b);
 };
 
 class Vector: public Tuple {
     public:
         Vector(float x, float y, float z);
         Vector();
+        Point operator+(const Point &b);
+        Vector operator+(const Vector &b);
+        Vector operator-(const Vector &b);
+        Vector operator*(const float &b);
+        Vector operator/(const float &b);
 };
 
 bool equal(const float &a, const float &b);
