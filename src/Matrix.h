@@ -4,6 +4,9 @@
 #include <vector>
 #include <iostream>
 #include <cassert>
+#include <cmath>
+
+#define PI M_PI
 
 // only need 2x2, 3x3 and 4x4 matrix
 class Matrix {
@@ -28,6 +31,12 @@ class Matrix {
 };
 
 bool equal(Matrix a, Matrix b);
+Matrix translation(float x, float y, float z);
+Matrix scaling(float x, float y, float z);
+Matrix rotationX(float r);
+Matrix rotationY(float r);
+Matrix rotationZ(float r);
+Matrix shearing(float xy, float xz, float yx, float yz, float zx, float zy);
 
 const Matrix IDENTITY(4, "id");
 

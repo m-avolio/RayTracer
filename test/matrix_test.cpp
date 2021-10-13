@@ -66,6 +66,21 @@ int main() {
               {-0.69231, -0.69231, -0.76923, -1.92308}});
     assert(equal(inv, a.inverse()));
     assert(equal(a, (a*b)*(b.inverse())));
+    //translating a point
+    Point p(-3, 4, 5);
+    assert(equal(Point(2, 1, 7), translation(5, -3, 2)*p));
     std::cout << "ALL TESTS PASSED" << std::endl;
+    //X rotation
+    p = Point(0, 1, 0);
+    assert(equal(Point(0, sqrt(2)/2, sqrt(2)/2), rotationX(PI/4)*p));
+    //Y rotations
+    p = Point(0, 0, 1);
+    assert(equal(Point(sqrt(2)/2, 0, sqrt(2)/2), rotationX(PI/4)*p));
+    //Z rotations
+    p = Point(0, 1, 0);
+    assert(equal(Point(-sqrt(2)/2, sqrt(2)/2, 0), rotationX(PI/4)*p));
+    //shearing
+    p = Point(2, 3, 4);
+    assert(equal(Point(5, 3, 4), shearing(1, 0, 0, 0, 0, 0)*p));
     return 0;
 }
