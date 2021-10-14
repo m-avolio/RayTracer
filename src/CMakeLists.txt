@@ -4,5 +4,7 @@ add_library (Src
              Canvas.cpp Canvas.h
              Matrix.cpp Matrix.h
              Ray.cpp Ray.h
+             Sphere.cpp Sphere.h
+             Shape.h
              )
 target_link_libraries (Src)
