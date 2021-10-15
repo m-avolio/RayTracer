@@ -86,6 +86,15 @@ Point Point::operator-(const Vector &b) {
     return point;
 }
 
+Point Point::operator-() {
+    Point point;
+    point.x = -this->x;
+    point.y = -this->y;
+    point.z = -this->z;
+    point.w = -this->w;
+    return point;
+}
+
 Vector::Vector(float x, float y, float z) {
     this->x = x;
     this->y = y;
@@ -142,6 +151,15 @@ Vector Vector::operator/(const float &b) {
     vector.y = this->y / b;
     vector.z = this->z / b;
     vector.w = this->w / b;
+    return vector;
+}
+
+Vector Vector::operator-() {
+    Vector vector;
+    vector.x = -this->x;
+    vector.y = -this->y;
+    vector.z = -this->z;
+    vector.w = -this->w;
     return vector;
 }
 

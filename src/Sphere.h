@@ -4,14 +4,13 @@
 #include <vector>
 #include <iostream>
 #include <queue>
-#include "Tuple.h"
 #include "Shape.h"
 
 class Sphere: public Shape {
     public:
         Sphere(){}
         Intersections intersect(Ray ray);
-        Matrix transform = IDENTITY;
+        Vector normal_at(Point world_point);
 };
 
 #endif

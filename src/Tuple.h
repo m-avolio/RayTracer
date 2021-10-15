@@ -26,6 +26,7 @@ class Point: public Tuple {
         Point operator+(const Vector &b);
         Vector operator-(const Point &b);
         Point operator-(const Vector &b);
+        Point operator-();
 };
 
 class Vector: public Tuple {
@@ -37,6 +38,7 @@ class Vector: public Tuple {
         Vector operator-(const Vector &b);
         Vector operator*(const float &b);
         Vector operator/(const float &b);
+        Vector operator-();
 };
 
 bool equal(const float &a, const float &b);

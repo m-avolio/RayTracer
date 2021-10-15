@@ -14,3 +14,11 @@ Intersections Sphere::intersect(Ray ray) {
     }
     return output;
 }
+
+Vector Sphere::normal_at(Point world_point) {
+    Point object_point = this->transform.inverse() * world_point;
+    Vector object_normal = object_point - Point();
+    Vector world_normal = this->transform.inverse().transpose() * object_normal;
+    world_normal.w = 0;
+    return norm(world_normal);
+}

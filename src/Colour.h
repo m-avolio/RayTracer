@@ -14,5 +14,6 @@ struct Colour {
 const Colour RED(1, 0, 0);
 const Colour GREEN(0, 1, 0);
 const Colour BLUE(0, 0, 1);
+const Colour BLACK(0, 0, 0);
 
 #endif

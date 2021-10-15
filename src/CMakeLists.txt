@@ -5,6 +5,8 @@ add_library (Src
              Matrix.cpp Matrix.h
              Ray.cpp Ray.h
              Sphere.cpp Sphere.h
-             Shape.h
+             Shape.cpp Shape.h
+             Light.cpp Light.h
+             Material.h
              )
 target_link_libraries (Src)
