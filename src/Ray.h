@@ -9,6 +9,7 @@ class Shape;
 class Ray {
     public:
         Ray(Point origin, Vector direction);
+        Ray() {}
         Point origin;
         Vector direction;
         Point position(float distance);

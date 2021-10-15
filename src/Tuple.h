@@ -45,7 +45,7 @@ bool equal(const Tuple &a, const Tuple &b);
 
 float magnitude(const Vector &v);
 
-Vector norm(Vector &v);
+Vector norm(const Vector &v);
 
 Vector cross(const Vector &a, const Vector &b);
 

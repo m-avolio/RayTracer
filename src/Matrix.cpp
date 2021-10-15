@@ -41,6 +41,23 @@ Tuple Matrix::operator*(const Tuple &b) const{
     return tuple;
 }
 
+Point Matrix::operator*(const Point &b) const{
+    Point point;
+    point.x = matrix[0][0]*b.x + matrix[0][1]*b.y + matrix[0][2]*b.z + matrix[0][3]*b.w;
+    point.y = matrix[1][0]*b.x + matrix[1][1]*b.y + matrix[1][2]*b.z + matrix[1][3]*b.w;
+    point.z = matrix[2][0]*b.x + matrix[2][1]*b.y + matrix[2][2]*b.z + matrix[2][3]*b.w;
+    point.w = matrix[3][0]*b.x + matrix[3][1]*b.y + matrix[3][2]*b.z + matrix[3][3]*b.w;
+    return point;
+}
+
+Vector Matrix::operator*(const Vector &b) const{
+    Vector vector;
+    vector.x = matrix[0][0]*b.x + matrix[0][1]*b.y + matrix[0][2]*b.z + matrix[0][3]*b.w;
+    vector.y = matrix[1][0]*b.x + matrix[1][1]*b.y + matrix[1][2]*b.z + matrix[1][3]*b.w;
+    vector.z = matrix[2][0]*b.x + matrix[2][1]*b.y + matrix[2][2]*b.z + matrix[2][3]*b.w;
+    vector.w = matrix[3][0]*b.x + matrix[3][1]*b.y + matrix[3][2]*b.z + matrix[3][3]*b.w;
+    return vector;
+}
 void Matrix::print() const{
     std::cout.precision(5);
     for (int i{0}; i < this->size; i++) {

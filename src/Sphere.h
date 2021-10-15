@@ -10,7 +10,8 @@
 class Sphere: public Shape {
     public:
         Sphere(){}
-        std::vector<Intersection> intersect(Ray ray, Intersections *i=NULL);
+        Intersections intersect(Ray ray);
+        Matrix transform = IDENTITY;
 };
 
 #endif

@@ -2,10 +2,17 @@
 
 Ray::Ray(Point origin, Vector direction): origin{origin}, direction{direction} {}
 
+
 Point Ray::position(float distance) {
     return this->origin + this->direction*distance;
 }
 
+Ray Ray::transform(Matrix m) {
+    Ray ray;
+    ray.origin = m*this->origin;
+    ray.direction = m*this->direction;
+    return ray;
+}
 Intersection *Intersections::hit() {
     while(!queue.empty()) {
         Intersection i = queue.top();

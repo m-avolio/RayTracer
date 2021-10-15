@@ -69,6 +69,8 @@ int main() {
     //translating a point
     Point p(-3, 4, 5);
     assert(equal(Point(2, 1, 7), translation(5, -3, 2)*p));
+    Vector v = Vector(0, 1, 0);
+    assert(equal(Vector(0, 1, 0), translation(3, 4, 5)*v));
     //X rotation
     p = Point(0, 1, 0);
     assert(equal(Point(0, sqrt(2)/2, sqrt(2)/2), rotationX(PI/4)*p));

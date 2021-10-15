@@ -146,7 +146,7 @@ Vector Vector::operator/(const float &b) {
 }
 
 // Helper Functions
-Vector norm(Vector &v) {
+Vector norm(const Vector &v) {
     Vector vector;
     float mag = magnitude(v);
     vector.x = v.x / mag;

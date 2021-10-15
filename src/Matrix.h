@@ -17,6 +17,8 @@ class Matrix {
         std::vector<float> & operator[](int index);
         Matrix operator*(const Matrix &b) const;
         Tuple operator*(const Tuple &b) const;
+        Point operator*(const Point &b) const;
+        Vector operator*(const Vector &b) const;
         void init(std::vector<std::vector<float>> m);
         void print() const;
         Matrix transpose() const;
